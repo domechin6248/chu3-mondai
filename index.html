@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="中3一問一答" />
+  <meta name="description" content="国語・数学・理科・社会・英語の一問一答。問題は自動で作られ、答えるとすぐに正解と解説が出ます。" />
+  <title>中3 受験対策 一問一答</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-row">
+      <button class="brand" id="brand" type="button" aria-label="ホームに戻る">
+        <span class="brand-main">中3 受験対策</span>
+        <span class="brand-sub">一問一答</span>
+      </button>
+      <div class="mini-stats" id="miniStats" hidden></div>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="科目選択"></nav>
+  </header>
+
+  <main>
+    <section id="home" class="home">
+      <h1 class="home-title">科目を選んでスタート</h1>
+      <p class="home-lead">問題は毎回自動で作られます（各教科30万問以上・合計400万問以上）。答えを選ぶと、すぐに正解と解説が表示されます。</p>
+      <div class="subject-grid" id="subjectGrid"></div>
+    </section>
+
+    <section id="quiz" class="quiz" hidden>
+      <div class="quiz-layout">
+        <article class="card" id="card">
+          <div class="meta">
+            <span class="cat" id="category"></span>
+            <span class="qno" id="qno"></span>
+          </div>
+          <h2 class="question" id="question"></h2>
+          <div class="choices" id="choices"></div>
+
+          <div class="feedback" id="feedback" hidden>
+            <div class="result" id="result"></div>
+            <div class="answer-line"><span class="answer-label">正解</span><span id="answerText"></span></div>
+            <p class="explanation" id="explanation"></p>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn ghost" id="idkBtn">わからない</button>
+            <button type="button" class="btn primary" id="nextBtn">次の問題</button>
+          </div>
+        </article>
+
+        <aside class="side">
+          <section class="panel stats">
+            <h3>成績（<span id="statsSubject"></span>）</h3>
+            <div class="rate" id="rate">--%</div>
+            <dl class="stat-list">
+              <div><dt>解答数</dt><dd id="statTotal">0</dd></div>
+              <div><dt>正解数</dt><dd id="statCorrect">0</dd></div>
+              <div><dt>連続正解</dt><dd id="statStreak">0</dd></div>
+              <div><dt>最高連続</dt><dd id="statBest">0</dd></div>
+            </dl>
+            <button type="button" class="link-btn" id="resetBtn">この科目の記録をリセット</button>
+          </section>
+          <section class="panel history">
+            <h3>最近の解答</h3>
+            <ol class="history-list" id="historyList"></ol>
+            <p class="empty" id="historyEmpty">まだ解答がありません</p>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/japanese.js"></script>
+  <script src="js/japanese-patterns.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/science.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/english.js"></script>
+  <script src="js/english-patterns.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

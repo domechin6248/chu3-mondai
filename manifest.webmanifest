@@ -1,0 +1,16 @@
+{
+  "name": "中3 受験対策 一問一答",
+  "short_name": "中3一問一答",
+  "description": "国語・数学・理科・社会・英語の一問一答。問題は自動で作られ、答えるとすぐに正解と解説が出ます。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f8",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
